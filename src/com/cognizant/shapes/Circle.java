@@ -24,7 +24,7 @@ public class Circle {
 		return area;
 			
 	}
-	double CalculateCircumference(float radius) {
+	public double CalculateCircumference(float radius) {
 		float circumference;
 		circumference=2*pi*radius;
 		return circumference;
