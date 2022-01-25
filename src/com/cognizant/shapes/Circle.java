@@ -3,7 +3,7 @@ package com.cognizant.shapes;
 public class Circle {
 
 	private float radius;
-	float pi;
+	float pi=3.5f;
 	
 	public Circle(){
 		radius=1.5f;
@@ -26,6 +26,7 @@ public class Circle {
 	}
 	public double CalculateCircumference(float radius) {
 		float circumference;
+		System.out.println(pi+radius);
 		circumference=2*pi*radius;
 		return circumference;
 		
