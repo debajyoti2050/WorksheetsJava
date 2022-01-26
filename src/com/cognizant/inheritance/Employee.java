@@ -2,24 +2,33 @@ package com.cognizant.inheritance;
 
 class Employee {
 	long employeeId;
-	String employeeName;
-	String employeeAddress;
+	String employeeName, employeeAddress;
 	Long employeePhone;
-	double basicSalary;
-	double speacialAllowance=250.80;
-	double Hra=1000.50;
-	
-	Employee(long Id,String Name,String Address,long phone){
-		this.employeeId=Id;
-		this.employeeName=Name;
-		this.employeeAddress=Address;
-		this.employeePhone=phone;
+	double basicSalary, specialAllowance = 250.80, hra = 1000.50;
+
+	Employee() {
+		super();
 	}
-	
+
+	Employee(long Id, String Name, String Address, Long Phone, double salary) {
+		super();
+		employeeId = Id;
+		employeeName = Name;
+		employeeAddress = Address;
+		employeePhone = Phone;
+		basicSalary = salary;
+	}
+
 	double calculateSalary() {
 		double salary;
-		salary=basicSalary+(basicSalary*speacialAllowance/100)+(basicSalary*Hra/100);
+		salary = basicSalary + (basicSalary * specialAllowance / 100) + (basicSalary * hra / 100);
 		return salary;
+	}
+
+	double calculateTransportAllowance() {
+		double transportAllowance;
+		transportAllowance = ((double) 10 / 100) * basicSalary;
+		return transportAllowance;
 	}
 
 }
